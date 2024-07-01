@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>DNNE_Sample</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<!-- https://github.com/AaronRobinsonMSFT/DNNE/blob/master/src/msbuild/DNNE.props -->
+		<DnneAdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\Include</DnneAdditionalIncludeDirectories>
+		<!-- <DnneWindowsExportsDef>exports.def</DnneWindowsExportsDef> -->
+		<DnneCompilerUserFlags>/FS</DnneCompilerUserFlags>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DNNEAttributes.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DNNE" Version="2.0.6" />
+  </ItemGroup>
+
+</Project>
